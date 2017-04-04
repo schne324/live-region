@@ -8,9 +8,6 @@
  * @option {String} `ariaRelevant`: "additions", "removals", "text", "all",
  *         or "additions text" (defaults to "additions")
  * @option {String} `ariaAtomic`: "true" or "false" (defaults to "false")
- * @option {Number} `expire`: The number of ms before removing the announcement
- *         node from the live region. This prevents the region from getting full
- *         of useless nodes (defaults to 7000)
  */
 
 function LiveRegion(options) {
@@ -47,18 +44,22 @@ LiveRegion.prototype.configure = function () {
 /**
  * announce
  * Creates a live region announcement
+ * @param {String} msg The message to announce
+ * @param {Number} `expire`: The number of ms before removing the announcement
+ * node from the live region. This prevents the region from getting full useless
+ * nodes (defaults to 7000)
  */
 
-LiveRegion.prototype.announce = function (msg) {
+LiveRegion.prototype.announce = function (msg, expire) {
   var announcement = document.createElement('div');
   announcement.innerHTML = msg;
   // add it to the offscreen region
   this.region.appendChild(announcement);
 
-  if (this.options.expire || typeof this.options.expire === 'undefined') {
+  if (expire || typeof expire === 'undefined') {
     setTimeout(function () {
       this.region.removeChild(announcement);
-    }.bind(this), this.options.expire || 7e3); // defaults to 7 seconds
+    }.bind(this), expire || 7e3); // defaults to 7 seconds
   }
 };
 

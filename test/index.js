@@ -12,17 +12,17 @@ describe('LiveRegion', function () {
   });
 
   describe('announcement', function () {
-    it('should add an element with the provided text', function () {
-      polite.announce('Hello');
+    it('should add an element with the provided text', function (done) {
+      polite.announce('Hello', 10);
       assert.equal(polite.region.firstChild.innerHTML, 'Hello');
+      setTimeout(done, 11);
     });
 
     it('should expire after the provided ms', function (done) {
-      var r = new LiveRegion({ expire: 100 });
-      r.announce('Hello');
-      assert.equal(r.region.childElementCount, 1);
+      polite.announce('Hello', 100);
+      assert.equal(polite.region.childElementCount, 1);
       setTimeout(function () {
-        assert.equal(r.region.childElementCount, 0);
+        assert.equal(polite.region.childElementCount, 0);
         done();
       }, 100);
     });
