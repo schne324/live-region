@@ -39,6 +39,7 @@ LiveRegion.prototype.configure = function () {
   this.region.style.height = '1px';
   this.region.style.marginTop = '-1px';
   this.region.style.clip = 'rect(1px, 1px, 1px, 1px)';
+  this.region.style.overflow = 'hidden';
 };
 
 /**
