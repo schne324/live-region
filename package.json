@@ -1,0 +1,25 @@
+{
+  "name": "live-region",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "gulp test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/schne324/live-region.git"
+  },
+  "author": "Harris Schneiderman",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/schne324/live-region/issues"
+  },
+  "homepage": "https://github.com/schne324/live-region#readme",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "gulp": "^3.9.1",
+    "gulp-mocha-phantomjs": "^0.12.1",
+    "mocha": "^3.2.0"
+  }
+}
