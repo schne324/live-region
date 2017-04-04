@@ -1,6 +1,6 @@
 # LiveRegion
 
-Creates an configurable offscreen live region.
+Creates a configurable offscreen live region.
 
 ## Usage
 ```js
@@ -17,7 +17,8 @@ This will create an offscreen live region:
 var assertive = new LiveRegion({
   ariaLive: 'assertive',
   role: 'log',
-  ariaRelevant: 'all'
+  ariaRelevant: 'all',
+  ariaAtomic: 'true'
 });
 ```
 ### Options
