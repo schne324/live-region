@@ -29,9 +29,9 @@ describe('LiveRegion', function () {
   });
 
   describe('destroy', function () {
-    it('should remove region node from the DOM', function (done) {
+    it('should remove region node from the DOM', function () {
       polite.destroy();
-      assert.isNull(polite.region.parentNode);
+      assert.false(document.contains(polite.region);
     });
   });
 });
