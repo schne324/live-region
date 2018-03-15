@@ -28,4 +28,10 @@ describe('LiveRegion', function () {
     });
   });
 
+  describe('destroy', function () {
+    it('should remove region node from the DOM', function (done) {
+      polite.destroy();
+      assert.isNull(polite.region.parentNode);
+    });
+  });
 });
