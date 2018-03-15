@@ -52,3 +52,9 @@ var assertive = new LiveRegion({
 ```js
 region.announce('Hello Fred', 5e3);
 ```
+
+### `LiveRegion#destroy`
+removes the live region DOM node inserted on initialization
+```js
+region.destroy();
+```
