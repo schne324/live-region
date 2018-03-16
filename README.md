@@ -1,5 +1,7 @@
 # LiveRegion
 
+[![CircleCI](https://circleci.com/gh/schne324/live-region.svg?style=svg)](https://circleci.com/gh/schne324/live-region)
+
 Creates a configurable offscreen live region.
 
 ## Installation
