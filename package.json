@@ -4,7 +4,7 @@
   "description": "Accessible live region module",
   "main": "index.js",
   "scripts": {
-    "test": "gulp test"
+    "test": "nyc --reporter=text ava --verbose"
   },
   "repository": {
     "type": "git",
@@ -17,9 +17,8 @@
   },
   "homepage": "https://github.com/schne324/live-region#readme",
   "devDependencies": {
-    "chai": "^3.5.0",
-    "gulp": "^3.9.1",
-    "gulp-mocha-phantomjs": "^0.12.1",
-    "mocha": "^3.2.0"
+    "ava": "^0.25.0",
+    "jsdom": "^11.6.2",
+    "jsdom-global": "^3.0.2"
   }
 }
