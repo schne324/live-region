@@ -19,6 +19,7 @@
   "devDependencies": {
     "ava": "^0.25.0",
     "jsdom": "^11.6.2",
-    "jsdom-global": "^3.0.2"
+    "jsdom-global": "^3.0.2",
+    "nyc": "^11.6.0"
   }
 }
