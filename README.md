@@ -5,7 +5,7 @@ Creates a configurable offscreen live region.
 ## Installation
 
 ```bash
-$ npm install --save live-region
+$ npm install live-region --save
 ```
 
 ## Usage
